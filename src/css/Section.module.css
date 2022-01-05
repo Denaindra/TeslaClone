@@ -1,0 +1,110 @@
+.background {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   background-image: url(../images/model-s.jpg);
+
+
+   /* -webkit-filter: blur(5px);
+   -moz-filter: blur(5px);
+   -o-filter: blur(5px);
+   -ms-filter: blur(5px);
+   filter: blur(5px);
+  
+   background-color: #ccc; */
+  
+}
+.titleGroup {
+  align-self: center;
+  text-align: center;
+  margin-top: 50px;  
+}
+
+.descriptiontTitle {
+  margin-top: -20px;
+}
+
+.buttonGroup {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .buttonGroup {
+        flex-direction: column;
+    }
+  }
+
+.bottomSection {
+  width: 40%;
+  align-self: center;
+  text-align: center;
+}
+
+.button {
+  cursor: pointer;
+  opacity: 0.85;
+  background-color: rgb(65, 61, 61);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 256px;
+  margin: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.rightButton {
+  opacity: 0.85;
+  background-color: rgb(255, 255, 255);
+  color: rgb(65, 61, 61);
+}
+
+.arrowButton {
+  height: 40px;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+/* down arrow animation  */
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 8px, 0);
+  }
+}
+
+.arrowButton {
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 8, 0);
+  }
+}
