@@ -3,8 +3,13 @@ import HomeStyle from "../css/Home.module.css";
 import React from "react";
 import * as modleImage from "../constant/StaticImages";
 import Header from "./Header";
+import { useDispatch } from "react-redux";
+import {addModelList} from "../actions/actions"
 
 function Home() {
+  const dispatch = useDispatch();
+  dispatch(addModelList());
+
   return (
     <React.Fragment>
       <Header />
@@ -56,7 +61,7 @@ function Home() {
 
       <Section
         title="Solar Roof"
-        leftBtn="Order Now"      
+        leftBtn="Order Now"
         backgroundImage={modleImage.accesoriesimg}
       />
     </React.Fragment>

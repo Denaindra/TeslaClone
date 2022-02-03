@@ -41,7 +41,7 @@ function SideNavigation(props) {
         <li>Test Drive</li>
       </ul>
     </div>
-    </Fade>
+     </Fade>
   );
 }
 

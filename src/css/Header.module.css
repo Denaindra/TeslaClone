@@ -43,22 +43,19 @@ a {
   right: 0;
   bottom: 0;
   width: 23%;
-  
-  
+  transition: position 22s;
 }
-
-/* .openSideNavigation {
-  transform: translateX(0%);
-}
-
-.closeSideNavigation {
-  transform: translateX(100%);
-} */
 
 ul {
   list-style-type: none;
   font-weight: 500;
-  /* overflow: auto; */
+
+  width: 30vw;
+  height: 49.75vw;
+  min-height: 1em;
+  overflow-y: visible;
+  overflow-x: hidden;
+  direction: ltr;
 }
 
 li {

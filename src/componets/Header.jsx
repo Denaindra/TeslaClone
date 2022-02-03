@@ -2,21 +2,22 @@ import HeaderStyle from "../css/Header.module.css";
 import Logo from "../images/logo.svg";
 import { useState } from "react";
 import SideNavigation from "./headerComponets/SideNavigation";
-import Fade from "react-reveal/Fade";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const model = useSelector((state) => state.model);
+
   const [showNavigation, setShowNavigation] = useState(false);
 
   return (
     <div className={HeaderStyle.background}>
       <img src={Logo} alt="logo" className={HeaderStyle.siteLogo} />
       <div className={HeaderStyle.headerMiddleMenu}>
-        <a href="https://www.w3schools.com">Model S</a>
-        <a href="https://www.w3schools.com">Model 3</a>
-        <a href="https://www.w3schools.com">Model X</a>
-        <a href="https://www.w3schools.com">Model Y</a>
-        <a href="https://www.w3schools.com">Solar Roof</a>
-        <a href="https://www.w3schools.com">Solar Panels</a>
+        {model.map((model, index) => (
+          <a key={index} href="https://www.w3schools.com">
+            {model}
+          </a>
+        ))}
       </div>
 
       <div className={HeaderStyle.headerRightMenu}>

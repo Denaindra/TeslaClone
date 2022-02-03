@@ -1,9 +1,11 @@
-import React from "react";
 import SectionStyle from "../css/Section.module.css";
 import homeObjOne from "../images/down-arrow.svg";
 import Fade from "react-reveal/Fade";
 
+
 function Section(props) {
+
+
   var secondButton = "";
 
   if (props.rightBtn != null) {
